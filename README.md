@@ -8,15 +8,10 @@
 | :------------- 		| :--------- 			        |
 | Sistema Operativo    	| `Windows	>= Server 2008`     | 
 | Servidor Web      	| `NodeJS >= `		        | 
-| Node JS 				| `PHP >= 7.1.3`				|
+| Node JS 				|  `NodeJS >= `				|
 |						| `OpenSSL PHP Extension`		|
 |						| `SQLSrv PHP Extension`		|
 |						| `SQLSrv PDO PHP Extension`	|
-|						| `Mbstring PHP Extension`		|
-|						| `Tokenizer PHP Extension`		|
-|						| `XML PHP Extension`			|
-|						| `Ctype PHP Extension`			|
-|						| `JSON PHP Extension`   		| 
 | Base de datos      	| `NOSQL MongoDB >= `		    | 
 | Angular               | `Angular >= `                |
 | Angular Cli           |                               |
