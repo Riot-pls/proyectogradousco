@@ -1,0 +1,2 @@
+# proyectogradousco
+En este proyecto se realizara un software que automatizará las inscripciones de los estudiantes de la universidad sur-colombiana en los procesos de proyectos de grado, con el fin de facilitar, agilizar y generar los procesos que actualmente se hacen manuales y presenciales. Las empresas también podrán realizar postulaciones ofreciendo propuestas de pasantias a los estudiantes y posibles ofertas laborales.
