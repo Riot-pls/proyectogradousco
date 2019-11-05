@@ -7,8 +7,8 @@
 | Requisitos   			| Versión    			        |
 | :------------- 		| :--------- 			        |
 | Sistema Operativo    	| `Windows	>= Server 2008`     | 
-| Servidor Web      	| `Apache >= 2.4`		        | 
-| PHP  					| `PHP >= 7.1.3`				|
+| Servidor Web      	| `NodeJS >= `		        | 
+| Node JS 				| `PHP >= 7.1.3`				|
 |						| `OpenSSL PHP Extension`		|
 |						| `SQLSrv PHP Extension`		|
 |						| `SQLSrv PDO PHP Extension`	|
@@ -17,10 +17,8 @@
 |						| `XML PHP Extension`			|
 |						| `Ctype PHP Extension`			|
 |						| `JSON PHP Extension`   		| 
-| Base de datos      	| `SQL Server >= 2012`		    | 
-| Node JS               | `NodeJS >= 8.10.0`            |
-| Laravel               | `Laravel = 5.6`               |
-| Angular               | `Angular >= 4`                |
+| Base de datos      	| `NOSQL MongoDB >= `		    | 
+| Angular               | `Angular >= `                |
 | Angular Cli           |                               |
 
 .
