@@ -26,12 +26,12 @@ import { PasantiaUscoComponent } from './pasantia-usco/pasantia-usco.component';
 
 const pagesRouter: Routes = [
     {
-        path: 'informacion' ,
-         component: InformacionComponent,
-         canActivate: [VerificaTokenGuard],
-         data: {titulo: 'informacion'}
+      path: 'informacion' ,
+      component: InformacionComponent,
+      //canActivate: [VerificaTokenGuard],
+      data: {titulo: 'informacion'}
 
-        },
+    },
     { path: 'solicitud' , component: SolicitudComponent},
     { path: 'anteproyecto' , component: AnteproyectoComponent},
     { path: 'proyecto' , component: ProyectoComponent},
@@ -41,22 +41,21 @@ const pagesRouter: Routes = [
     { path: 'notificaciones' , component: NotificacionesComponent},
 
 
-     { path: 'semillero' , component: SemilleroUscoComponent},
-     { path: 'pasantia' , component: PasantiaUscoComponent},
-
+    { path: 'semillero' , component: SemilleroUscoComponent},
+    { path: 'pasantia' , component: PasantiaUscoComponent},
     {
-        path: 'admin' ,
-        component: AdminComponent,
-       canActivate:[AdminGuard,VerificaTokenGuard],
-       
-        children: [
-          { path: 'usuarios', component: TablaTodosComponent},
-          { path: 'programas' , component: ProgramasAcademicosComponent},
-          { path: 'sedeUniversitaria' , component: SedesComponent},
-          { path: 'facultad' , component: FacultadComponent},
-          { path: '' , redirectTo: 'usuarios', pathMatch: 'full'}
-        ]
-      },
+      path: 'admin' ,
+      component: AdminComponent,
+      //canActivate:[AdminGuard,VerificaTokenGuard],
+      
+      children: [
+        { path: 'usuarios', component: TablaTodosComponent},
+        { path: 'programas' , component: ProgramasAcademicosComponent},
+        { path: 'sedeUniversitaria' , component: SedesComponent},
+        { path: 'facultad' , component: FacultadComponent},
+        { path: '' , redirectTo: 'usuarios', pathMatch: 'full'}
+      ]
+    },
     { path: 'docente' , component: DocenteComponent},
     { path: 'docente2' , component: DocenteDosComponent},
     { path: 'docente3' , component: DocenteTresComponent},
