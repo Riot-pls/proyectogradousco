@@ -12,13 +12,20 @@ export class OlvidoClaveComponent implements OnInit {
   title = 'sweetAlert';
   emailForm: any;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder, 
+              private router: Router) {
+  
     this.emailForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.pattern('[^@]([A-Za-z0-9._]+){1,25}')]]
+      email: ['',
+        [ 
+          Validators.required, 
+          Validators.pattern('[^@]([A-Za-z0-9._]+){1,25}')
+        ]
+      ]
     });
-
-    console.log(this.emailForm);
   }
+
+  ngOnInit() { }
 
   get email() {
     return this.emailForm.get('email');
@@ -26,13 +33,11 @@ export class OlvidoClaveComponent implements OnInit {
 
   sendEmail() {
     if (this.emailForm.dirty && this.emailForm.valid) {
-      this.router.navigate(['/cambio-clave']);
+      this.router.navigate(['/change-password']);
     }
   }
 
-  ngOnInit() {}
-
-   showModal() {
+  showModal() {
     Swal.fire(
       'Revise su correo ',
       'Se le ha enviado un mensaje a su correo electronico, por favor reviselo',

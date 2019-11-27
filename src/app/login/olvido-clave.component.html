@@ -28,13 +28,13 @@
                         <br> El correo es requerido.
                     </div>
                     <div *ngIf="email.errors.pattern">
-                        <br>El correo no es valido.
+                        <br>El correo no es válido.
                     </div>
                 </h6>
             </div>
             <div class="txtcenter">
-                <a href="javascript: history.back()" class="mr-5 uscolink">VOLVER ATRÁS</a>
-                <button type="submit" [disabled]="!emailForm.valid" class="btn uscoButton" (click)="showModal()">ENVIAR CORREO</button>
+                <a href="javascript: history.back()" class="mr-5 uscolink">Regresar</a>
+                <button type="submit" [disabled]="!emailForm.valid" class="btn uscoButton" (click)="showModal()">Enviar correo</button>
             </div>
         </form>
     </div>

@@ -17,7 +17,6 @@ import { PAGES_ROUTES } from './pages.router';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InformacionComponent } from './informacion/informacion.component';
-import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 
 //CrudAdmin
 import { AdminComponent } from './admin/admin.component';
@@ -46,7 +45,6 @@ import { PasantiaUscoComponent } from './pasantia-usco/pasantia-usco.component';
     DocenteTresComponent,
     ProfileComponent,
     InformacionComponent,
-    NotificacionesComponent,
     //CrudAdmin
     AdminComponent,
     TablaTodosComponent,

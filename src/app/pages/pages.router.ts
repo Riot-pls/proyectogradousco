@@ -15,7 +15,6 @@ import { ProgramasAcademicosComponent } from './admin/programas-academicos.compo
 import { SedesComponent } from './admin/sedes.component';
 import { FacultadComponent } from './admin/Facultad.component';
 import { InformacionComponent } from './informacion/informacion.component';
-import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 import { AnteproyectoComponent } from './proyectosUsco/anteproyecto/anteproyecto.component';
 import { ProyectoComponent } from './proyectosUsco/proyecto/proyecto.component';
 import { ArticuloComponent } from './proyectosUsco/articulo/articulo.component';
@@ -30,7 +29,6 @@ const pagesRouter: Routes = [
       component: InformacionComponent,
       //canActivate: [VerificaTokenGuard],
       data: {titulo: 'informacion'}
-
     },
     { path: 'solicitud' , component: SolicitudComponent},
     { path: 'anteproyecto' , component: AnteproyectoComponent},
@@ -38,16 +36,12 @@ const pagesRouter: Routes = [
     { path: 'articulo' , component: ArticuloComponent},
     { path: 'progreso' , component: ProgresoComponent},
     { path: 'perfil' , component: ProfileComponent},
-    { path: 'notificaciones' , component: NotificacionesComponent},
-
-
     { path: 'semillero' , component: SemilleroUscoComponent},
     { path: 'pasantia' , component: PasantiaUscoComponent},
     {
       path: 'admin' ,
       component: AdminComponent,
-      //canActivate:[AdminGuard,VerificaTokenGuard],
-      
+      //canActivate:[AdminGuard,VerificaTokenGuard],      
       children: [
         { path: 'usuarios', component: TablaTodosComponent},
         { path: 'programas' , component: ProgramasAcademicosComponent},

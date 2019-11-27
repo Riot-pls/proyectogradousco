@@ -8,11 +8,21 @@
 
 export class Notificacion {
 
-    constructor(
-        public emisor: string,
-        public receptor: string,
-        public tipoNotificacion: string,
-        public _id?: string
-    ) {
-    }
+    _id:                    string;
+    destinatario_id:        string;
+    codigo_estudiantil:     string;
+    email_destinatario:     string;
+    nombre_destinatario:    string;
+    usuario_remitente_id:   string;
+    usuario_remitente:      string;
+    asunto:                 string;
+    mensaje:                string;
+    tipo_notificacio:       string;
+    estado_notificacion:    string;
+    nivel_notificacion:     string;
+    destinatario:           string;
+    fecha_creado:           string;
+    fecha_programado:       string;
+    fecha_ejecutado:        string;
+        
 }

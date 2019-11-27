@@ -26,10 +26,8 @@ export class NotificacionService {
   menu: any[] = [];
   totalNotificaciones = 0;
 
-  constructor(public http: HttpClient, public router: Router) { // Inyectar servicios
-    console.log('Servicio de notificación listo.');
-    console.log(this.notificacion);
-  }
+  constructor(public http: HttpClient, 
+              public router: Router) {}
 
   crearNotificacion(notificacion: Notificacion) {
     const url = URL_SERVICIOS + '/notificacion';
@@ -37,7 +35,6 @@ export class NotificacionService {
       swal.fire('Notificación creada', 'success');
       return resp.notificacion;
     }).catch(err => {
-      // console.log(err.error.mensaje);
       swal.fire(err.error.mensaje, err.error.errors.message, 'error');
       return Observable.throw(err);
     });
@@ -55,9 +52,9 @@ export class NotificacionService {
     });
   }
 
-  cargarNotificaciones(desde: number= 0) {
+  cargarNotificaciones(desde: number = 0) {
     const url = URL_SERVICIOS + '/notificacion?desde=' + desde;
-    return this.http.get(url) .map((resp: any) => {
+    return this.http.get(url).map((resp: any) => {
       this.totalNotificaciones = resp.total;
       return resp.notificacion;
     });

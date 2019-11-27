@@ -59,7 +59,7 @@ export class RegistroDosComponent implements OnInit {
     }
     let usuario = new Usuario(null,null, null, null, null, this.forma.value.tipoUsuario, this.forma.value.tipoID, this.forma.value.numDocumento,null, this.forma.value.codigoUniversitario, null, null, null, null, null, null);
     
-    this.router.navigate(['/registro-tres']);
+    this.router.navigate(['/singup-three']);
     this._usuarioService.paginadoRegistro2a3(usuario);
   }
 

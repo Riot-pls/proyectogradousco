@@ -20,7 +20,7 @@
                             <button routerLink='/informacion' type="button" class="btn" style='font-size:36px; color:#dfd4a6;padding: 0px;margin-left: 145px'><i class='far fa-question-circle'></i></button>
                         </div>
                     </div>
-                    <div class="col-auto text-right" *ngIf="sesionLogo()" style="padding: 5px">
+                    <div class="col-auto text-right" style="padding: 5px">
                         <div class="dropdown">
                             <button routerLink='/notificaciones' type="button" class="btn" style='font-size:36px; color:#dfd4a6;padding: 0px;margin:0px'><i class='fas fa-bell'></i></button>
                         </div>
@@ -72,7 +72,7 @@
             </div>
             <div *ngIf="!sesionLogo()">
                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown"></div>
-                <a routerLink="/registro" style="color:#dfd4a6">Registrarse</a>
+                <a routerLink="/singup" style="color:#dfd4a6">Registrarse</a>
             </div>
 
         </div>

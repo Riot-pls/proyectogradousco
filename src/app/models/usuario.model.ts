@@ -2,28 +2,22 @@
 
 export class Usuario{
 
-    constructor(
-        public nombres:string,
-        public apellidos:string,
-        public password:string,
-        public email:string,
-        public telefono:string,
-        public tipoUsuario:string,
-        public tipoID:string,
-        public numDocumento:string,
-        public genero:string,
-        public codigoUniversitario:string,
-        public sedeUniversitaria:string,
-        public facultad:string,
-        public programaUniversitario:string,
-        public estado?:Boolean,
-        public role?:string,
-        public _id?: string
-    ){
-
-
-    }
-
-
+    _id:                    string;
+    nombres:                string;
+    apellidos:              string;
+    password:               string;
+    email:                  string;
+    telefono:               string;
+    celular:                string;
+    tipoUsuario:            string;
+    tipoID:                 string;
+    numDocumento:           string;
+    genero:                 string;
+    codigoUniversitario:    string;
+    sedeUniversitaria:      string;
+    facultad:               string;
+    programaUniversitario:  string;
+    estado:                 boolean;
+    role:                   string;
 
 }

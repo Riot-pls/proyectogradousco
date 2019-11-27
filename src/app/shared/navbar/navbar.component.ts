@@ -9,12 +9,12 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 export class NavbarComponent implements OnInit {
   usuario: Usuario;
-  constructor(public _SIDEBAR: SidebarService, public _USUARIOSERVICE: UsuarioService) {
+  constructor(   public _SIDEBAR: SidebarService, 
+                public _USUARIOSERVICE: UsuarioService) {
     this.usuario = this._USUARIOSERVICE.usuario;
-   }
+  }
 
   ngOnInit() {
-   
     this._SIDEBAR.cargarMenu();
   }
 
@@ -28,10 +28,9 @@ export class NavbarComponent implements OnInit {
   ]
 
   onToolbarMenuToggle() {
-    console.log('On toolbar toggled', this.isMenuOpen);
     this.isMenuOpen = !this.isMenuOpen;
 
-    if(!this.isMenuOpen) {
+    if (!this.isMenuOpen) {
       this.contentMargin = 70;
     } else {
       this.contentMargin = 240;

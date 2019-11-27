@@ -34,7 +34,7 @@ export class CambioClaveComponent implements OnInit {
   }
   savePassword() {
     if (this.passwordForm.dirty && this.passwordForm.valid) {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/home']);
     }
   }
 

@@ -23,6 +23,9 @@ import { ServiceModule } from './services/service.module';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+// Module
+import {NotificationsModule} from './modules/notifications/notifications.module'
+import {SettingsModule} from './modules/settings/settings.module';
 
 
 @NgModule({
@@ -36,7 +39,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     RegistroDosComponent,
     RegistroTresComponent,
     SearchComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -45,8 +47,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    ServiceModule
+    ServiceModule,
+    NotificationsModule,
+    SettingsModule
   ],
+  entryComponents: [],
   providers: [],
   bootstrap: [AppComponent],
 

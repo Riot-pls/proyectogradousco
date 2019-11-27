@@ -8,11 +8,5 @@ export class Sede{
         public direccion:string,
         public email:string,
         public _id?: string
-    ){
-
-
-    }
-
-
-
+    ){}
 }

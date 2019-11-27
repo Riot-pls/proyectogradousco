@@ -10,26 +10,88 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 import { SearchComponent } from './search/search.component';
 import { LoginGuardGuard } from './services/guards/login-guard.guard';
 
-
+const auth = 'Autorización';
+const Notification = 'Couchdb';
+const Pages = 'Pages';
+const Audit = 'Auditoria';
+const Reporter = 'Reporteador';
+const Administration = 'Administración';
+const Test = 'Test';
+const Company = 'Empresas';
+const Teacher = 'Profesores';
+const Student = 'Estidiantes';
 
 
 
 const appRoutes: Routes = [ // Se crea el objeto de tipo Routes,
-    { path: '', redirectTo: 'search', pathMatch: 'full' },
-    { path: 'login' , component: LoginComponent},
-    { path: 'cambio-clave' , component: CambioClaveComponent},
-    { path: 'olvido-clave' , component: OlvidoClaveComponent},
-    { path: 'registro' , component: RegistroComponent},
-    { path: 'registro-dos' , component: RegistroDosComponent},
-    { path: 'registro-tres' , component: RegistroTresComponent},
-    { path: 'search' , component: SearchComponent},
+  {
+    path: '',
+    component: PagesComponent,
+    loadChildren: './pages/pages.module#PagesModule'
+  },
+  {
+    path: 'administration',
+    loadChildren: './modules/administration/administration.module#AdministrationModule',
+    //canActivate: [AuthGuard],
+    data: {
+      icon: 'screen',
+      text: 'Administración',
+      section: Administration,
+      display: true,
+      //isLogged: false, //si no está logeado, no ingresa
+      //profiles: ['administrador', 'developer','AuxAdministrativo']
+    },
+  },
+  {
+    path: '',
+    redirectTo: 'search',
+    pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'change-password',
+    component: CambioClaveComponent
+  },
+  {
+    path: 'forget-password',
+    component: OlvidoClaveComponent
+  },
+  {
+    path: 'singup',
+    component: RegistroComponent
+  },
+  {
+    path: 'singup-two',
+    component: RegistroDosComponent
+  },
+  {
+    path: 'singup-three',
+    component: RegistroTresComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
+  },
+  // Temporalmente estan estas rutas aqui, para mostrarlo en factoria.
 
-    // Temporalmente estan estas rutas aqui, para mostrarlo en factoria.
-    // tslint:disable-next-line:max-line-length
-    { path: '', component: PagesComponent, canActivate: [LoginGuardGuard], loadChildren: './pages/pages.module#PagesModule'}, // Carga de forma dinamica. Un modulo independiente.
-    // loadChildren = primera parte es el path al modulo que quiero cargar y la segunda es el nombre del modulo.
 
-  { path: '**' , component: NopagefoundComponent}, // Los ** es un comodin para cualquier ruta invalida.
+
+  /*
+  {
+    path: '', 
+    component: PagesComponent, 
+    canActivate: [LoginGuardGuard], // Carga de forma dinamica. Un modulo independiente.
+    loadChildren: './pages/pages.module#PagesModule'  // loadChildren = primera parte es el path al modulo que quiero cargar y la segunda es el nombre del modulo.
+  }, 
+ */
+
+  {
+    path: '**',
+    component: NopagefoundComponent
+  }, // Los ** es un comodin para cualquier ruta invalida.
 ];
 // Se modulan las rutas para ser importadas en el module principal.
-export const APP_ROUTES = RouterModule.forRoot(appRoutes, {useHash: true});
+export const APP_ROUTES = RouterModule.forRoot(appRoutes, { useHash: true });
