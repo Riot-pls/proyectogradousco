@@ -10,6 +10,8 @@ export class DetailNotificationComponent implements OnInit {
 
   notifications:any;
 
+  @Input() item: any;
+
   @Input() set dataNotification(notifications) {
     this.notifications = notifications;
   }

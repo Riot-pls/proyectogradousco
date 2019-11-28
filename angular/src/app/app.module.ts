@@ -38,9 +38,7 @@ import { ProyectoService } from './shared/services/proyecto.service';
 import { ArticuloService } from './shared/services/articulo.service';
 import { AnteProyectoService } from './shared/services/anteproyecto.service';
 import { ModalUploadService } from './components/modal-upload/modal-upload.service';
-import { NotificationService } from './shared/services/notification.service';
-import { ListUserNotificationComponent } from './notifications/list-user-notification/list-user-notification.component';
-
+import { ApiService } from './shared/services/api.service';
 
 
 @NgModule({
@@ -53,7 +51,6 @@ import { ListUserNotificationComponent } from './notifications/list-user-notific
     RegistroDosComponent,
     RegistroTresComponent,
     SearchComponent,
-    ListUserNotificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,7 +76,7 @@ import { ListUserNotificationComponent } from './notifications/list-user-notific
     ArticuloService,
     AnteProyectoService,
     ModalUploadService,
-    NotificationService,
+    ApiService,
     AdminGuard,
     LoginGuardGuard,
     VerificaTokenGuard,    

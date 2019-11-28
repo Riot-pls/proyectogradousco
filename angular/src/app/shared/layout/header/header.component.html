@@ -1,8 +1,9 @@
+<!--
 <header class="all header">
     <div class="container">
         <div class="row align-items-center">
 
-            <!----------------------- IMAGES NAVBAR ------------------------------>
+            <!----------------------- IMAGES NAVBAR ------------------------------
             <div class="col-lg-3 col-sm-3 col-4 text-center">
                 <a href="#" title="Universidad Surcolombiana">
                     <img class="img-fluid" style="height: 100px;" alt="Universidad Surcolombiana"
@@ -16,9 +17,9 @@
                         src="../../assets/images/universidad-surcolombiana-acreditacion.png" >
                 </a>
             </div>
-            <!----------------------- /IMAGES NAVBAR ------------------------------>
+            <!----------------------- /IMAGES NAVBAR ------------------------------
 
-            <!------------------------ SINGIN SINGUP ----------------------------->
+            <!------------------------ SINGIN SINGUP -----------------------------
             <div class="col-lg-4 col-sm-4 ">
                 <div *ngIf="!sesionLogo()">
                     <a routerLink="/login" class="" title="Ingresar" style="color:#dfd4a6"><i class="fas fa-lock"></i></a>
@@ -28,7 +29,7 @@
                     <a routerLink="/singup" style="color:#dfd4a6"></a>
                 </div>
             </div>    
-            <!------------------------ /SINGIN SINGUP ----------------------------->
+            <!------------------------ /SINGIN SINGUP -----------------------------
 
 
             <div class="col text-right">
@@ -59,36 +60,36 @@
                     </div>
                 </div>
             </div>
-
-            <!-- INFORMACIÓN
-             <div *ngIf="sesionLogo()"  class="col text-right" >
-               
-                    <div class="dropdown">
-                        <button routerLink='/informacion' type="button" class="btn" style='font-size:36px; color:#dfd4a6'><i class='far fa-question-circle'></i></button>
-                    </div>
-                </div>
-                -->
-            <!-- NOTIFICACIONES
-            <div *ngIf="sesionLogo()"  class="col text-right" >
-               
-                <div class="dropdown">
-                    <button routerLink='/notificaciones' type="button" class="btn" style='font-size:36px; color:#dfd4a6'><i class='fas fa-bell'></i></button>
-                </div>
-            </div>
--->
-            <!-- PERFIL
-            <div *ngIf="sesionLogo()" class="col text-right">
-             
-                    <div class="dropdown">
-                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style='font-size:36px; color:#dfd4a6'><i class='fas fa-user-circle'></i></button>
-                        <div class="dropdown-menu animated fadeIn fast">
-                            <a class="dropdown-item" routerLink='/perfil'>Perfil</a>
-                            <div class="dropdown-divider"></div>
-                            <a (click)="_usuarioService.logout()" class="dropdown-item" routerLink='/search'>Cerrar sesión</a>
-                        </div>
-                    </div>
-            </div>
-             -->
         </div>
     </div>
 </header>
+-->
+<nav class="navbar header navbar-expand-lg navbar-light">
+        <div class="container">
+            <!----------------------- IMAGES NAVBAR ------------------------------>
+            <a class="navbar-brand" href="/">
+                <img class="img-fluid" style="height: 50px;" alt="Universidad Surcolombiana" src="../../assets/images/universidad-surcolombiana-acreditacion.png">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!----------------------- /IMAGES NAVBAR ----------------------------->
+
+            <!------------------------ SINGIN SINGUP ----------------------------->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" style="color: #dfd4a6" routerLink="/">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                            <a class="nav-link" style="color: #dfd4a6" routerLink="/login">Ingresar</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #dfd4a6" routerLink="/singup">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+            <!------------------------ /SINGIN SINGUP ----------------------------->
+        </div>
+    </nav>

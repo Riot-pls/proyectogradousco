@@ -11,6 +11,10 @@ body {
     width: 990px;
 }
 
+.color-label-header {
+    color:#dfd4a6
+}
+
 .txtcenter {
     text-align: center;
 }

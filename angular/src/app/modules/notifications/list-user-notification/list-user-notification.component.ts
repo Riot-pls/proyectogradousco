@@ -1,7 +1,8 @@
+import { ApiService } from './../../../shared/services/api.service';
+import { Notification } from './../../../shared/models/notification.model';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { NotificationService } from './../../../shared/services/notification.service';
-import { Notificacion } from 'src/app/shared/models/notificacion.model';
+
 
 @Component({
   selector: 'app-list-user-notification',
@@ -10,29 +11,46 @@ import { Notificacion } from 'src/app/shared/models/notificacion.model';
 })
 export class ListUserNotificationComponent implements OnInit {
 
-  notifications=[];
-  detailsNotification: Notificacion;
+  notifications: [];
+  detailNotification: Notification;
+  item: any;
 
-  notificaciones: Notificacion[]=[];
-  cargando:boolean=true;
-  notifiVacia:boolean=false;
-  constructor(public _notificacionService: NotificationService) {
+  constructor(private api: ApiService) {
 
-   }
+  }
 
-   ngOnInit() {
-    
-    this.notifications = [
-      {asunto: 'Email fecha asignada', fecha_ejecutado: '2014-10-10', message: 'Este es uin mensaje para lapresentación a clases'},
-      {asunto: 'Presentacion pasantias', fecha_ejecutado: '2014-10-10', message: 'hola clase'},
-      {asunto: 'Ponencia proyecto', fecha_ejecutado: '2014-10-10', message: 'buenas tardes mensaje 3'},
-    ];
-    
+  ngOnInit() {
+
+    //this.getNotificationsUser();
+    this.getNotifications();
+
   }
 
   // get details notification
-  getDetailNotification(notification) {
-    this.detailsNotification = notification;
+  getDetailNotification(item, notification) {
+    this.detailNotification = notification;
+    this.item = item;
+    console.log(this.detailNotification);
+  }
+
+  /**
+   * 
+   */
+  getNotificationsUser() {
+    this.api.get('notification/notifications-user').subscribe(
+      resp => {
+        this.notifications = resp;
+      });
+  }
+
+  /**
+   * 
+   */
+  getNotifications() {
+    this.api.get('notification/notifications').subscribe(
+      resp => {
+        this.notifications = resp;
+      });
   }
 
 }

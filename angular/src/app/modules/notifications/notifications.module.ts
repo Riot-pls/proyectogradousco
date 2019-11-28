@@ -8,6 +8,7 @@ import { CreateNotificationComponent } from './create-notification/create-notifi
 import { DeleteNotificationComponent } from './delete-notification/delete-notification.component';
 import { DetailNotificationComponent } from './detail-notification/detail-notification.component';
 import { ListUserNotificationComponent } from './list-user-notification/list-user-notification.component';
+import { ListAdminNotificationComponent } from './list-admin-notification/list-admin-notification.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ListUserNotificationComponent } from './list-user-notification/list-use
     DeleteNotificationComponent,
     DetailNotificationComponent,
     ListUserNotificationComponent,
+    ListAdminNotificationComponent,
   ],
   imports: [
     CommonModule,
