@@ -26,7 +26,9 @@ export class ListUserNotificationComponent implements OnInit {
 
   }
 
-  // get details notification
+  /**
+   *
+   */ 
   getDetailNotification(item, notification) {
     this.detailNotification = notification;
     this.item = item;

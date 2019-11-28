@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotificationsComponent } from './notifications.component';
 import { UpdateNotificationComponent } from '../notifications/update-notification/update-notification.component';
 import { CreateNotificationComponent } from './create-notification/create-notification.component';
 import { DeleteNotificationComponent } from './delete-notification/delete-notification.component';
 import { ListUserNotificationComponent } from './list-user-notification/list-user-notification.component';
+import { ListAdminNotificationComponent } from './list-admin-notification/list-admin-notification.component';
 
 
 const routes: Routes = [
   {
     path: 'notification',
     component: ListUserNotificationComponent,
+    //canActivate: [AuthGuard],
+    data: {
+      'title': 'Notificaciones',
+      //profiles: ['administrador'],
+    }
+  },
+  {
+    path: 'notification-tutors',
+    component: ListAdminNotificationComponent,
     //canActivate: [AuthGuard],
     data: {
       'title': 'Notificaciones',
