@@ -6,12 +6,9 @@
 ### Configuración:
 | Requisitos   			| Versión    			        |
 | :------------- 		| :--------- 			        |
-| Sistema Operativo    	| `Windows	>= Server 2008`     | 
+| Sistema Operativo    	|      | 
 | Servidor Web      	| `NodeJS >= `		        | 
 | Node JS 				|  `NodeJS >= `				|
-|						| `OpenSSL PHP Extension`		|
-|						| `SQLSrv PHP Extension`		|
-|						| `SQLSrv PDO PHP Extension`	|
 | Base de datos      	| `NOSQL MongoDB >= `		    | 
 | Angular               | `Angular >= `                |
 | Angular Cli           |                               |
