@@ -20,7 +20,7 @@ export class ListAdminNotificationComponent implements OnInit {
   /**
    * 
    */
-  getStudentToFaculta(){
+  getStudentToFaculta(item, notification){
     this.api.get('')
       .subscribe(
         res => {
